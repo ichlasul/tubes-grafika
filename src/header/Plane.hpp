@@ -20,7 +20,7 @@ public:
 	 * Algoritmanya sama untuk bidang apapun
 	 */
 	void fill() {
-		floodFill();
+		floodFill(center);
 	}
 
 	/**
@@ -42,8 +42,15 @@ private:
 	/**
 	 * Method pewarnaan dengan flood fill
 	 */
-	void floodFill() {
+	void floodFill(Point position) {
+		if (getpixel(position) = lineColor) return;
+		if (position.isOutOfBound()) return;
 
+		setpixel(position.x, position.y, fillColor);
+		floodFill(position.up());
+		floodFill(position.right());
+		floodFill(position.down());
+		floodFill(position.left());
 	}
 
 private:
@@ -56,5 +63,10 @@ private:
 	/**
 	 * Warna bagian dalam bidang
 	 */
-	int color;
+	int fillColor;
+
+	/**
+	 * Warna garis bidang
+	 */
+	int lineColor;
 };
