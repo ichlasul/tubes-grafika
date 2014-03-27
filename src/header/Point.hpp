@@ -7,33 +7,33 @@ public:
 	Point(int x, int y) : x(x), y(y){};
 	~Point(){};
 
-	int getX() {
-		return x;
-	}
+	int getX();
+	int getY();
 
-	int getY() {
-		return y;
-	}
+	/**
+	 * Memeriksa apakah titik berada di luar batas layar
+	 */
+	bool isOutOfBound();
 
-	bool isOutOfBound() {
-		return x >= 0 && x < 640 && y >= 0 && y < 480;
-	}
+	/**
+	 * Mengembalikan titik di atas titik semula
+	 */
+	Point up();
 
-	Point up() {
-		return new Point(x, y - 1);
-	}
+	/**
+	 * Mengembalikan titik di bawah titik semula
+	 */
+	Point down();
 
-	Point down() {
-		return new Point(x, y + 1);
-	}
+	/**
+	 * Mengembalikan titik di kiri titik semula
+	 */
+	Point left();
 
-	Point left() {
-		return new Point(x - 1, y);
-	}
-
-	Point right() {
-		return new Point(x + 1, y);
-	}
+	/**
+	 * Mengembalikan titik di kanan titik semula
+	 */
+	Point right();
 
 private:
 	int x;
