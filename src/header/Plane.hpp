@@ -1,4 +1,4 @@
-#include <Point.h>
+#include "src/header/Point.hpp"
 
 /**
  * Kelas abstrak yang merepresentasikan bidang
@@ -26,32 +26,23 @@ public:
 	/**
 	 * Method untuk melakukan translasi
 	 */
-	void translate(int x, int y) = 0;
+	virtual void translate(int x, int y) = 0;
 
 	/**
 	 * Method untuk melakukan rotasi
 	 */
-	void rotate(int theta) = 0;
+	virtual void rotate(int theta) = 0;
 
 	/**
 	 * Method untuk melakukan scaling
 	 */
-	void scale(int width, int height) = 0;
+	virtual void scale(int width, int height) = 0;
 
 private:
 	/**
 	 * Method pewarnaan dengan flood fill
 	 */
-	void floodFill(Point position) {
-		if (getpixel(position) = lineColor) return;
-		if (position.isOutOfBound()) return;
-
-		setpixel(position.x, position.y, fillColor);
-		floodFill(position.up());
-		floodFill(position.right());
-		floodFill(position.down());
-		floodFill(position.left());
-	}
+	void floodFill(Point position);
 
 private:
 	/**

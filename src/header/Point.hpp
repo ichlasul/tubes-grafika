@@ -3,7 +3,7 @@
  */
 class Point {
 public:
-	Point() :x(0), y(0){};
+	Point() : x(0), y(0){};
 	Point(int x, int y) : x(x), y(y){};
 	~Point(){};
 
@@ -13,7 +13,7 @@ public:
 	/**
 	 * Memeriksa apakah titik berada di luar batas layar
 	 */
-	bool isOutOfBound();
+	int isOutOfBound();
 
 	/**
 	 * Mengembalikan titik di atas titik semula
