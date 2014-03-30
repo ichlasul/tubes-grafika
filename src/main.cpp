@@ -1,9 +1,12 @@
 #include <stdio.h>
 
+#include "src/header/World.hpp"
+
 int main() {
 
-	printf("Ulalal\n");
-	getchar();
+	World world;
+
+	world.start();
 
 	return 0;
 }

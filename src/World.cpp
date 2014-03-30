@@ -1,12 +1,14 @@
 #include "src/header/World.hpp"
 #include "src/header/Grafika.hpp"
 
-void World::World() {
+World::World() : bg(20) {
 	isRunning = false;
 	Grafika::canvas_start();
+
+	start();
 }
 
-void World::~World() {
+World::~World() {
 	Grafika::canvas_finish();
 }
 
@@ -21,10 +23,10 @@ void World::stop() {
 }
 
 void World::loop() {
-	while (isRunning) {
+	//while (isRunning) {
 		draw();
 		update();
-	}
+	//}
 }
 
 void World::draw() {

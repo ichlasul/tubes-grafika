@@ -13,7 +13,8 @@ int Grafika::maxx = 0;
 int Grafika::maxy = 0;
 
 void Grafika::canvas_start() {
-	int gdriver = DETECT, gmode, errorcode;
+	int gdriver = EGA, gmode = EGAHI, errorcode;
+	char msg[80];
 
 	initgraph(&gdriver, &gmode, "C:\\TC\\BGI");
 
@@ -25,12 +26,13 @@ void Grafika::canvas_start() {
 		exit(1);
 	}
 
-	setcolor(0);
-
 	midx = getmaxx() / 2;
 	midy = getmaxy() / 2;
 	maxx = getmaxx();
 	maxy = getmaxy();
+
+	//sprintf(msg, "Color 2");
+	//outtextxy(midx, midy, msg);
 }
 
 void Grafika::canvas_clear() {
@@ -43,6 +45,11 @@ void Grafika::canvas_finish() {
 
 	closegraph();
 }
+
+void Grafika::canvas_color(int color) {
+	setbkcolor(color);
+}
+
 
 int Grafika::getMaxX() {
 	return maxx;

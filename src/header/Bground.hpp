@@ -5,13 +5,17 @@
 
 class Bground {
 public:
-	Bground();
+	Bground(int height);
 	~Bground();
 
 	void draw();
 
 private:
-	Polygon sky;
+	void drawGround();
+	void drawSky();
+	void drawRoad();
+
+private:
 	Polygon road;
 
 	int horizon;

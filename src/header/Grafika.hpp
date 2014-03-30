@@ -12,6 +12,7 @@ public:
 	static void canvas_start();
 	static void canvas_clear();
 	static void canvas_finish();
+	static void canvas_color(int color);
 
 	static int getMaxX();
 	static int getMaxY();
