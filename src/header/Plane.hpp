@@ -1,3 +1,6 @@
+#ifndef GRAFIKA_PLANE_HPP
+#define GRAFIKA_PLANE_HPP
+
 #include "src/header/Point.hpp"
 
 /**
@@ -61,3 +64,5 @@ private:
 	 */
 	int lineColor;
 };
+
+#endif

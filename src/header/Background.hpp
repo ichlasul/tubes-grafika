@@ -1,0 +1,3 @@
+#ifndef GRAFIKA_BAKCGROUND_HPP
+#define GRAFIKA_BAKCGROUND_HPP
+#endif

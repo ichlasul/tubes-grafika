@@ -1,0 +1,3 @@
+#ifndef GRAFIKA_OBSTACLE_HPP
+#define GRAFIKA_OBSTACLE_HPP value
+#endif

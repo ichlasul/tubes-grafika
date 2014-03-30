@@ -1,3 +1,6 @@
+#ifndef GRAFIKA_WORLD_HPP
+#define GRAFIKA_WORLD_HPP
+
 class World {
 public:
 	World();
@@ -14,3 +17,5 @@ private:
 	int lastUpdateTime;
 	int fps;
 };
+
+#endif

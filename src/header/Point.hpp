@@ -1,3 +1,6 @@
+#ifndef GRAFIKA_POINT_HPP
+#define GRAFIKA_POINT_HPP
+
 #include "src/header/Boolean.h"
 
 /**
@@ -41,3 +44,5 @@ private:
 	int x;
 	int y;
 };
+
+#endif

@@ -1,5 +1,5 @@
-#ifndef BOOLEAN_H
-#define BOOLEAN_H
+#ifndef GRAFIKA_BOOLEAN_H
+#define GRAFIKA_BOOLEAN_H
 
 #define bool int
 #define true 1

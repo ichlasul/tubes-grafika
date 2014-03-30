@@ -1,0 +1,3 @@
+#ifndef GRAFIKA_POLYGON_HPP
+#define GRAFIKA_POLYGON_HPP
+#endif
