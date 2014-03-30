@@ -1,10 +1,10 @@
 #ifndef GRAFIKA_OBSTACLES_LIST_HPP
 #define GRAFIKA_OBSTACLES_LIST_HPP
 
-class ObstaclesList {
+class ObsList {
 public:
-	ObstaclesList();
-	~ObstaclesList();
+	ObsList();
+	~ObsList();
 	
 };
 #endif
