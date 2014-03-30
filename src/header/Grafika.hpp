@@ -30,6 +30,8 @@ public:
 	static void draw_line_vertical(int x, int y1, int y2, int color);
 	static void draw_line_horizontal(int x1, int x2, int y, int color);
 
+	static void Grafika::draw_poly(int num, Point * vertices);
+
 	static void draw_circle(int x0, int y0, int r);
 	static void draw_ellipse(int x0, int y0, int rx, int ry);
 

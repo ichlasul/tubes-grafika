@@ -68,7 +68,8 @@ void Grafika::set_usinglibrary(bool mode) {
  * Menggambar sebuah titik dengan warna tertentu
  */
 void Grafika::draw_point(int x, int y, int color) {
-	putpixel(midx + x, midy - y, color);
+	//putpixel(midx + x, midy - y, color);
+	putpixel(x, y, color);
 }
 
 
@@ -210,6 +211,22 @@ void Grafika::draw_line_horizontal(int x1, int x2, int y, int color) {
 		draw_point(i, y, color);
 	}
 
+}
+
+void Grafika::draw_poly(int num, Point * vertices) {
+	if (is_usinglibrary) {
+		int * points = new int[num];
+		for (int i = 0; i < num; i++) {
+			points[2 * i] = vertices[i].getX();
+			points[(2 * i) + 1] = vertices[i].getY();
+		}
+		drawpoly(num, points);
+	} else {
+		for (int i = 0; i < num - 1; i++) {
+			draw_line_DDA(vertices[i].getX(), vertices[i].getY(),vertices[i + 1].getX(), vertices[i + 1].getY());
+		}
+		draw_line_DDA(vertices[num - 1].getX(), vertices[num - 1].getY(),vertices[0].getX(), vertices[0].getY());
+	}
 }
 
 void Grafika::draw_point_circle(int x0, int y0, int x, int y) {

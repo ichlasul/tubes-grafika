@@ -1,5 +1,7 @@
 #include "src/header/Polygon.hpp"
 
+#include "src/header/Grafika.hpp"
+
 Polygon::Polygon() : num(1){
 	vertices = new Point[0];
 	vertices[0] = Point(0,0);
