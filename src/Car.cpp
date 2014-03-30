@@ -36,11 +36,11 @@ void Car::draw() {
 }
 
 void Car::moveLeft() {
-	posX = posX - 5;
+	posX = posX - 20;
 }
 
 void Car::moveRight() {
-	posX = posX + 5;
+	posX = posX + 20;
 }
 
 int Car::getPosX() {

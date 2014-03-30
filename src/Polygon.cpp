@@ -38,7 +38,7 @@ void Polygon::drawLine() {
 }
 
 void Polygon::fillPoly() {
-
+	Grafika::fill_poly(num, vertices, fillColor);
 }
 
 void Polygon::translate(int x, int y) {}

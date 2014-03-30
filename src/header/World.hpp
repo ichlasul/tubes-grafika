@@ -21,7 +21,6 @@ private:
 	void update();
 	void checkInput();
 	void checkCollision();
-	void delay(int time);
 
 private:
 	Bground bg;

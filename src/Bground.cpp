@@ -64,5 +64,6 @@ void Bground::drawSky() {
 
 void Bground::drawRoad() {
 	road.drawLine();
-	road.fill();
+	//road.fill();
+	road.fillPoly();
 }
