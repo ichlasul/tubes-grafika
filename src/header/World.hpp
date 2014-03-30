@@ -2,10 +2,10 @@
 #define GRAFIKA_WORLD_HPP
 
 #include "src/header/Point.hpp"
-#include "src/header/Background.hpp"
+#include "src/header/Bground.hpp"
 #include "src/header/Car.hpp"
-#include "src/header/ObstaclesList.hpp"
-#include "src/header/ScoreBoard.hpp"
+#include "src/header/ObsList.hpp"
+#include "src/header/SBoard.hpp"
 
 class World {
 public:
@@ -14,10 +14,10 @@ public:
 
 
 private:
-	Background bg;
+	Bground bg;
 	Car car;
-	ObstaclesList obs;
-	ScoreBoard sb;
+	ObsList obs;
+	SBoard sb;
 	int isRunning;
 	int timer;
 	int lastUpdateTime;

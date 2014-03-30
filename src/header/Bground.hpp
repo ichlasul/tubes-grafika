@@ -1,10 +1,10 @@
 #ifndef GRAFIKA_BACKGROUND_HPP
 #define GRAFIKA_BACKGROUND_HPP
 
-class Bg {
+class Bground {
 public:
-	Bg();
-	~Bg();
+	Bground();
+	~Bground();
 	
 };
 #endif
