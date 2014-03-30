@@ -5,6 +5,8 @@ class SBoard {
 public:
 	SBoard() {};
 	~SBoard() {};
+
+	void display(int score, int win);
 	
 };
 #endif
