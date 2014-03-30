@@ -11,9 +11,6 @@ public:
 	Polygon(int num, Point * points);
 	~Polygon();
 
-	int getNum();
-	int* getPoints();
-
 	void fillPoly();
 	void drawLine();
 	void translate(int x, int y);
