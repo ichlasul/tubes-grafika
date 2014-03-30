@@ -2,9 +2,6 @@
 
 #include "src/header/Grafika.hpp"
 
-#include <graphics.h>
-#include <stdio.h>
-
 Polygon::Polygon() : num(1){
 	vertices[0] = Point(0,0);
 	lineColor = 15;

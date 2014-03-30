@@ -224,6 +224,8 @@ void Grafika::draw_poly(int num, Point * vertices) {
 		points[(2 * num) + 1] = vertices[0].getY();
 
 		drawpoly(num + 1, points);
+		setfillstyle(SOLID_FILL, 9);
+		fillpoly(num, points);
 	} else {
 		for (int i = 0; i < num - 1; i++) {
 			draw_line_DDA(vertices[i].getX(), vertices[i].getY(),vertices[i + 1].getX(), vertices[i + 1].getY());
