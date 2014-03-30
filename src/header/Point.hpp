@@ -1,3 +1,5 @@
+#include "src/header/Boolean.h"
+
 /**
  * Kelas yang merepresentasikan titik
  */
@@ -13,7 +15,7 @@ public:
 	/**
 	 * Memeriksa apakah titik berada di luar batas layar
 	 */
-	int isOutOfBound();
+	bool isOutOfBound();
 
 	/**
 	 * Mengembalikan titik di atas titik semula

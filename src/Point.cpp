@@ -8,7 +8,7 @@ int Point::getY() {
 	return y;
 }
 
-int Point::isOutOfBound() {
+bool Point::isOutOfBound() {
 	return x >= 0 && x < 640 && y >= 0 && y < 480;
 }
 
