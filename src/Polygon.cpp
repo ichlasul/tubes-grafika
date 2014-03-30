@@ -34,7 +34,7 @@ Polygon::~Polygon() {
 }
 
 void Polygon::drawLine() {
-	Grafika::draw_poly(num, vertices);
+	Grafika::draw_poly(num, vertices,lineColor);
 }
 
 void Polygon::fillPoly() {

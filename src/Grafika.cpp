@@ -212,7 +212,7 @@ void Grafika::draw_line_horizontal(int x1, int x2, int y, int color) {
 
 }
 
-void Grafika::draw_poly(int num, Point * vertices) {
+void Grafika::draw_poly(int num, Point * vertices, int color) {
 	if (is_usinglibrary) {
 		int * points = new int[(num + 1) * 2];
 		for (int i = 0; i < num; i++) {
@@ -223,6 +223,7 @@ void Grafika::draw_poly(int num, Point * vertices) {
 		points[2 * num] = vertices[0].getX();
 		points[(2 * num) + 1] = vertices[0].getY();
 
+		setcolor(color);
 		drawpoly(num + 1, points);
 	} else {
 		for (int i = 0; i < num - 1; i++) {

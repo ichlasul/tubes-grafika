@@ -12,6 +12,9 @@ public:
 	void draw();
 
 private:
+	void initSky();
+	void initRoad();
+
 	void drawGround();
 	void drawSky();
 	void drawRoad();

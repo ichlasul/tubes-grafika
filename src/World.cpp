@@ -3,7 +3,7 @@
 
 World::World() {
 	isRunning = false;
-	bg = Bground(50);
+	bg = Bground(80);
 }
 
 World::~World() {
