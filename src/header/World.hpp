@@ -10,8 +10,18 @@
 class World {
 public:
 	World();
-	~World();
+	~World(){};
 
+	void start();
+	void stop();
+
+private:
+	void loop();
+	void draw();
+	void update();
+	void checkInput();
+	void checkCollision();
+	void delay(int time);
 
 private:
 	Bground bg;
