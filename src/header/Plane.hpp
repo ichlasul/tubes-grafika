@@ -9,8 +9,6 @@
  */
 class Plane {
 public:
-	Plane() {};
-	~Plane() {};
 
 	/**
 	 * Method abstrak menggambar garis boundary, sesuai bentuk bendanya
@@ -47,7 +45,7 @@ private:
 	 */
 	void floodFill(Point position);
 
-private:
+protected:
 	/**
 	 * Titik tengah bidang
 	 * Bisa diasumsikan sebagai titik bakar algoritma Flood Fiil

@@ -18,7 +18,8 @@ public:
 	void scale(int width, int height);
 
 private:
-	Point * vertices;
+	Point vertices[10];
+	int * polypoint;
 	int num;
 };
 

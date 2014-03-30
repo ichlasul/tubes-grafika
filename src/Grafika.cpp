@@ -15,8 +15,7 @@ int Grafika::maxy = 0;
 bool Grafika::is_usinglibrary = false;
 
 void Grafika::canvas_start() {
-	int gdriver = EGA, gmode = EGAHI, errorcode;
-	char msg[80];
+	int gdriver = DETECT, gmode, errorcode;
 
 	initgraph(&gdriver, &gmode, "C:\\TC\\BGI");
 
@@ -215,15 +214,20 @@ void Grafika::draw_line_horizontal(int x1, int x2, int y, int color) {
 
 void Grafika::draw_poly(int num, Point * vertices) {
 	if (is_usinglibrary) {
-		int * points = new int[num];
+		int * points = new int[(num + 1) * 2];
 		for (int i = 0; i < num; i++) {
 			points[2 * i] = vertices[i].getX();
 			points[(2 * i) + 1] = vertices[i].getY();
+			//printf("%d, %d\n", vertices[i].getX(),vertices[i].getY());
 		}
-		drawpoly(num, points);
+		points[2 * num] = vertices[0].getX();
+		points[(2 * num) + 1] = vertices[0].getY();
+
+		drawpoly(num + 1, points);
 	} else {
 		for (int i = 0; i < num - 1; i++) {
 			draw_line_DDA(vertices[i].getX(), vertices[i].getY(),vertices[i + 1].getX(), vertices[i + 1].getY());
+			printf("%d\n", num);
 		}
 		draw_line_DDA(vertices[num - 1].getX(), vertices[num - 1].getY(),vertices[0].getX(), vertices[0].getY());
 	}

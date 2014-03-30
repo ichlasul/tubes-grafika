@@ -1,15 +1,12 @@
 #include "src/header/World.hpp"
 #include "src/header/Grafika.hpp"
 
-World::World() : bg(20) {
+World::World() {
 	isRunning = false;
-	Grafika::canvas_start();
-
-	start();
+	bg = Bground(50);
 }
 
 World::~World() {
-	Grafika::canvas_finish();
 }
 
 void World::start() {

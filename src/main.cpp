@@ -4,11 +4,12 @@
 #include "src/header/Grafika.hpp"
 
 int main() {
-	Grafika::set_usinglibrary(false);
+	Grafika::set_usinglibrary(true);
+	Grafika::canvas_start();
 
 	World world;
-
 	world.start();
 
+	Grafika::canvas_finish();
 	return 0;
 }
