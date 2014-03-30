@@ -5,6 +5,14 @@ class Bground {
 public:
 	Bground();
 	~Bground();
+
+	void draw();
+
+private:
+	Polygon sky;
+	Polygon road;
+
+	int horizon;
 	
 };
 #endif
