@@ -4,6 +4,8 @@
 #include "src/header/Point.hpp"
 #include "src/header/Boolean.h"
 
+#include <conio.h>
+
 #define round(x) ((int) (x + 0.5))
 
 class Grafika {

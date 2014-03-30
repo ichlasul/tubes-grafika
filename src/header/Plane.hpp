@@ -10,6 +10,10 @@
 class Plane {
 public:
 
+	void setCenter(Point point);
+	void setLineColor(int color);
+	void setFillColor(int color);
+
 	/**
 	 * Method abstrak menggambar garis boundary, sesuai bentuk bendanya
 	 */

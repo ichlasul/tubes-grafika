@@ -6,6 +6,7 @@ Polygon::Polygon() : num(1){
 	vertices[0] = Point(0,0);
 	lineColor = 15;
 	fillColor = 4;
+	center = vertices[0];
 }
 
 Polygon::Polygon(int num, int * points) : num(num) {
@@ -15,6 +16,7 @@ Polygon::Polygon(int num, int * points) : num(num) {
 
 	lineColor = 15;
 	fillColor = 4;
+	center = vertices[0];
 }
 
 Polygon::Polygon(int num, Point * points) : num(num) {
@@ -24,6 +26,7 @@ Polygon::Polygon(int num, Point * points) : num(num) {
 
 	lineColor = 15;
 	fillColor = 4;
+	center = vertices[0];
 }
 
 Polygon::~Polygon() {

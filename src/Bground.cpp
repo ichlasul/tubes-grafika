@@ -2,8 +2,6 @@
 
 #include "src/header/Grafika.hpp"
 
-#include <stdio.h>
-
 Bground::Bground() : horizon(40) {
 	Point point[4];
 
@@ -13,6 +11,9 @@ Bground::Bground() : horizon(40) {
 	point[3] = Point(0, horizon);
 
 	sky = Polygon(4, point);
+	sky.setCenter(Point(Grafika::get_maxx() / 2, horizon / 2));
+	sky.setLineColor(WHITE);
+	sky.setFillColor(LIGHTBLUE);
 }
 
 Bground::Bground(int height) : horizon(height) {
@@ -24,6 +25,9 @@ Bground::Bground(int height) : horizon(height) {
 	point[3] = Point(0, horizon);
 
 	sky = Polygon(4, point);
+	sky.setCenter(Point(Grafika::get_maxx() / 2, horizon / 2));
+	sky.setLineColor(WHITE);
+	sky.setFillColor(LIGHTBLUE);
 }
 
 Bground::~Bground() {
@@ -42,4 +46,5 @@ void Bground::drawGround() {
 
 void Bground::drawSky() {
 	sky.drawLine();
+	sky.fill();
 }

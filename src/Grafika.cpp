@@ -130,7 +130,7 @@ void Grafika::draw_line_DDA(int x1, int y1, int x2, int y2) {
 	float x_inc, y_inc;
 	float x = x1;
 	float y = y1;
-	int color = 59;
+	int color = 15;
 
 	if (dx == 0) draw_line_vertical(x1, y1, y2, color);
 	if (dy == 0) draw_line_horizontal(x1, x2, y1, color);
@@ -224,12 +224,9 @@ void Grafika::draw_poly(int num, Point * vertices) {
 		points[(2 * num) + 1] = vertices[0].getY();
 
 		drawpoly(num + 1, points);
-		setfillstyle(SOLID_FILL, 9);
-		fillpoly(num, points);
 	} else {
 		for (int i = 0; i < num - 1; i++) {
 			draw_line_DDA(vertices[i].getX(), vertices[i].getY(),vertices[i + 1].getX(), vertices[i + 1].getY());
-			printf("%d\n", num);
 		}
 		draw_line_DDA(vertices[num - 1].getX(), vertices[num - 1].getY(),vertices[0].getX(), vertices[0].getY());
 	}
