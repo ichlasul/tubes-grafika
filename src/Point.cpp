@@ -11,7 +11,7 @@ int Point::getY() {
 }
 
 bool Point::isOutOfBound() {
-	return x >= 0 && x < Grafika::getMaxX() && y >= 0 && y < Grafika::getMaxY();
+	return x >= 0 && x < Grafika::get_maxx() && y >= 0 && y < Grafika::get_maxy();
 }
 
 Point Point::up() {

@@ -51,10 +51,10 @@ void Grafika::canvas_color(int color) {
 }
 
 
-int Grafika::getMaxX() {
+int Grafika::get_maxx() {
 	return maxx;
 }
-int Grafika::getMaxY() {
+int Grafika::get_maxy() {
 	return maxy;
 }
 
@@ -291,4 +291,18 @@ void Grafika::draw_ellipse(int x0, int y0, int rx, int ry) {
 		}
 		draw_point_ellipse(x0, y0, x, y);
 	}
+}
+
+
+void Grafika::flood_fill(Point position, int fillColor, int lineColor) {
+	if (getpixel(position.getX(), position.getY()) == lineColor) return;
+	if (getpixel(position.getX(), position.getY()) == fillColor) return;
+	if (position.isOutOfBound()) return;
+
+	putpixel(position.getX(), position.getY(), fillColor);
+	floodFill(position.up());
+	floodFill(position.right());
+	floodFill(position.down());
+	floodFill(position.left());
+
 }

@@ -28,6 +28,8 @@ public:
 	static void draw_circle(int x0, int y0, int r);
 	static void draw_ellipse(int x0, int y0, int rx, int ry);
 
+	static void flood_fill(Point seed, int fill, int border);
+
 private:
 	static void draw_point_circle(int x0, int y0, int x, int y);
 	static void draw_point_ellipse(int x0, int y0, int x, int y);
