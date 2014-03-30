@@ -17,9 +17,8 @@ public:
 	void rotate(int theta);
 	void scale(int width, int height);
 
-private:
+protected:
 	Point vertices[10];
-	int * polypoint;
 	int num;
 };
 

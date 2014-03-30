@@ -6,6 +6,7 @@
 #include "src/header/Car.hpp"
 #include "src/header/ObsList.hpp"
 #include "src/header/SBoard.hpp"
+#include "src/header/Box.hpp"
 
 class World {
 public:
@@ -31,6 +32,8 @@ private:
 	int timer;
 	int lastUpdateTime;
 	int fps;
+
+	Box box;
 };
 
 #endif
