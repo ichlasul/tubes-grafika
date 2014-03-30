@@ -13,6 +13,9 @@ public:
 	static void canvas_clear();
 	static void canvas_finish();
 
+	static int getMaxX();
+	static int getMaxY();
+
 	static void draw_point(int x1, int x2, int color);
 
 	static void draw_line_FPC(int x1, int y1, int x2, int y2);
@@ -30,7 +33,10 @@ private:
 
 private:
 	static int midx;
-	static int midy;	
+	static int midy;
+
+	static int maxx;
+	static int maxy;	
 };
 
 #endif

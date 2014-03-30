@@ -10,7 +10,7 @@
 class World {
 public:
 	World();
-	~World(){};
+	~World();
 
 	void start();
 	void stop();

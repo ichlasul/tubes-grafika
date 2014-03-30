@@ -1,7 +1,13 @@
-#include "src/Header/World.hpp"
+#include "src/header/World.hpp"
+#include "src/header/Grafika.hpp"
 
 void World::World() {
 	isRunning = false;
+	Grafika::canvas_start();
+}
+
+void World::~World() {
+	Grafika::canvas_finish();
 }
 
 void World::start() {

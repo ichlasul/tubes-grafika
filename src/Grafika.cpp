@@ -9,6 +9,9 @@
 int Grafika::midx = 0;
 int Grafika::midy = 0;
 
+int Grafika::maxx = 0;
+int Grafika::maxy = 0;
+
 void Grafika::canvas_start() {
 	int gdriver = DETECT, gmode, errorcode;
 
@@ -26,6 +29,8 @@ void Grafika::canvas_start() {
 
 	midx = getmaxx() / 2;
 	midy = getmaxy() / 2;
+	maxx = getmaxx();
+	maxy = getmaxy();
 }
 
 void Grafika::canvas_clear() {
@@ -37,6 +42,13 @@ void Grafika::canvas_finish() {
 	getch();
 
 	closegraph();
+}
+
+int Grafika::getMaxX() {
+	return maxx;
+}
+int Grafika::getMaxY() {
+	return maxy;
 }
 
 /**
