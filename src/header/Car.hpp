@@ -3,7 +3,7 @@
 
 class Car {
 public:
-	Car();
+	Car() {};
 	~Car();
 	
 };

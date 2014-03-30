@@ -6,6 +6,9 @@
 #include <conio.h>
 #include <stdlib.h>
 
+int Grafika::midx = 0;
+int Grafika::midy = 0;
+
 void Grafika::canvas_start() {
 	int gdriver = DETECT, gmode, errorcode;
 

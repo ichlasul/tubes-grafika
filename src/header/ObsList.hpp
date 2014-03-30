@@ -3,7 +3,7 @@
 
 class ObsList {
 public:
-	ObsList();
+	ObsList() {};
 	~ObsList();
 	
 };

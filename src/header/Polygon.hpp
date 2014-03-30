@@ -3,7 +3,7 @@
 
 class Polygon {
 public:
-	Polygon();
+	Polygon() {};
 	~Polygon();
 	
 };

@@ -3,7 +3,7 @@
 
 class SBoard {
 public:
-	SBoard();
+	SBoard() {};
 	~SBoard();
 	
 };
