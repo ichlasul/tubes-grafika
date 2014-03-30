@@ -1,6 +1,7 @@
 #include "src/header/Plane.hpp"
-#include <graphics.h>
+
+#include "src/header/Grafika.hpp"
 
 void Plane::floodFill(Point position) {
-	Grafika::floodFill(position, fillColor, lineColor);
+	Grafika::flood_fill(position, fillColor, lineColor);
 }

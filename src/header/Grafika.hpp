@@ -1,6 +1,9 @@
 #ifndef GRAFIKA_GRAFIKA_HPP
 #define GRAFIKA_GRAFIKA_HPP
 
+#include "src/header/Point.hpp"
+#include "src/header/Boolean.h"
+
 #define round(x) ((int) (x + 0.5))
 
 class Grafika {
@@ -14,8 +17,10 @@ public:
 	static void canvas_finish();
 	static void canvas_color(int color);
 
-	static int getMaxX();
-	static int getMaxY();
+	static int get_maxx();
+	static int get_maxy();
+
+	static void set_usinglibrary(bool mode);
 
 	static void draw_point(int x1, int x2, int color);
 
@@ -34,12 +39,16 @@ private:
 	static void draw_point_circle(int x0, int y0, int x, int y);
 	static void draw_point_ellipse(int x0, int y0, int x, int y);
 
+	static void floodFillNaive(Point pos, int fill, int border);
+
 private:
 	static int midx;
 	static int midy;
 
 	static int maxx;
-	static int maxy;	
+	static int maxy;
+
+	static bool is_usinglibrary;
 };
 
 #endif

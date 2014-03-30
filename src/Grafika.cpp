@@ -12,6 +12,8 @@ int Grafika::midy = 0;
 int Grafika::maxx = 0;
 int Grafika::maxy = 0;
 
+bool Grafika::is_usinglibrary = false;
+
 void Grafika::canvas_start() {
 	int gdriver = EGA, gmode = EGAHI, errorcode;
 	char msg[80];
@@ -56,6 +58,10 @@ int Grafika::get_maxx() {
 }
 int Grafika::get_maxy() {
 	return maxy;
+}
+
+void Grafika::set_usinglibrary(bool mode) {
+	is_usinglibrary = mode;
 }
 
 /**
@@ -295,14 +301,23 @@ void Grafika::draw_ellipse(int x0, int y0, int rx, int ry) {
 
 
 void Grafika::flood_fill(Point position, int fillColor, int lineColor) {
-	if (getpixel(position.getX(), position.getY()) == lineColor) return;
-	if (getpixel(position.getX(), position.getY()) == fillColor) return;
-	if (position.isOutOfBound()) return;
+	if (is_usinglibrary) {
+		setfillstyle(SOLID_FILL, fillColor);
+		floodfill(position.getX(), position.getY(), lineColor);
+	} else {
+		floodFillNaive(position, fillColor, lineColor);
+	}
 
-	putpixel(position.getX(), position.getY(), fillColor);
-	floodFill(position.up());
-	floodFill(position.right());
-	floodFill(position.down());
-	floodFill(position.left());
+}
 
+void Grafika::floodFillNaive(Point pos, int fill, int border) {
+	if (getpixel(pos.getX(), pos.getY()) == border) return;
+	if (getpixel(pos.getX(), pos.getY()) == fill) return;
+	if (pos.isOutOfBound()) return;
+
+	putpixel(pos.getX(), pos.getY(), fill);
+	floodFillNaive(pos.up(), fill, border);
+	floodFillNaive(pos.right(), fill, border);
+	floodFillNaive(pos.down(), fill, border);
+	floodFillNaive(pos.left(), fill, border);
 }
