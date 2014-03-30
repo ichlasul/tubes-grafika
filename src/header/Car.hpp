@@ -27,5 +27,7 @@ private:
 	int posY;
 	int panjang;
 	int lebar;
+
+	int speed;
 };
 #endif

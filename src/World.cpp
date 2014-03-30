@@ -7,8 +7,10 @@ World::World() {
 	isRunning = false;
 	bg = Bground(80);
 
-    int p = 60;
-    int l = 60;
+	fps = 15;
+
+    int p = 100;
+    int l = 100;
     int xc = Grafika::get_maxx() / 2;
     int yc = Grafika::get_maxy() - 60;
     car = Car(xc,yc,p,l);
@@ -32,7 +34,7 @@ void World::loop() {
 		Grafika::canvas_clear();
 		draw();
 		update();
-        delay(500);
+        delay(1000 / fps);
 	}
 }
 

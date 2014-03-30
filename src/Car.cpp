@@ -7,6 +7,8 @@ Car::Car() {
 	posY = 0;
 	panjang = 0;
 	lebar = 0;
+
+	speed = 20;
 }
 
 Car::~Car() {
@@ -18,6 +20,8 @@ Car::Car(int _posX, int _posY, int _panjang, int _lebar) {
 	posY = _posY;
 	panjang = _panjang;
 	lebar = _lebar;
+
+	speed = 10;
 }
 
 void Car::draw() {
@@ -36,11 +40,11 @@ void Car::draw() {
 }
 
 void Car::moveLeft() {
-	posX = posX - 20;
+	posX = posX - speed;
 }
 
 void Car::moveRight() {
-	posX = posX + 20;
+	posX = posX + speed;
 }
 
 int Car::getPosX() {

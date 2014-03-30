@@ -342,3 +342,19 @@ void Grafika::floodFillNaive(Point pos, int fill, int border) {
 	floodFillNaive(pos.down(), fill, border);
 	floodFillNaive(pos.left(), fill, border);
 }
+
+void Grafika::fill_poly(int num, Point * vertices, int fill) {
+	if (is_usinglibrary) {
+		int * points = new int[(num + 1) * 2];
+		for (int i = 0; i < num; i++) {
+			points[2 * i] = vertices[i].getX();
+			points[(2 * i) + 1] = vertices[i].getY();
+			//printf("%d, %d\n", vertices[i].getX(),vertices[i].getY());
+		}
+
+		setfillstyle(SOLID_FILL, fill);
+		fillpoly(num, points);
+	} else {
+		
+	}
+}
