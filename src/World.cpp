@@ -6,6 +6,7 @@
 World::World() {
 	isRunning = false;
 	bg = Bground(80);
+    tb = TBoard(30);
 
 	fps = 15;
 
@@ -41,10 +42,12 @@ void World::loop() {
 void World::draw() {
 	bg.draw();
 	car.draw();
+    tb.draw();
 	obs.draw();
 }
 
 void World::update() {
+    tb.update();
 	checkInput();
 	checkCollision();
 }

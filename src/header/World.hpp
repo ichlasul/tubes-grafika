@@ -7,6 +7,7 @@
 #include "src/header/ObsList.hpp"
 #include "src/header/SBoard.hpp"
 #include "src/header/Box.hpp"
+#include "src/header/TBoard.hpp"
 
 class World {
 public:
@@ -24,6 +25,7 @@ private:
 	void checkCollision();
 
 private:
+	TBoard tb;
 	Bground bg;
 	Car car;
 	ObsList obs;
