@@ -86,7 +86,7 @@ void Grafika::draw_line_FPC(int x1, int y1, int x2, int y2) {
 	int yb = y2;
 	int x, y;
 	float m;
-	int color = 60;
+	int color = BLUE;
 
 	if (dx == 0) draw_line_vertical(x1, y1, y2, color);
 	if (dy == 0) draw_line_horizontal(x1, x2, y1, color);
@@ -130,7 +130,7 @@ void Grafika::draw_line_DDA(int x1, int y1, int x2, int y2) {
 	float x_inc, y_inc;
 	float x = x1;
 	float y = y1;
-	int color = 15;
+	int color = BLUE;
 
 	if (dx == 0) draw_line_vertical(x1, y1, y2, color);
 	if (dy == 0) draw_line_horizontal(x1, x2, y1, color);

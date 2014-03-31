@@ -1,6 +1,7 @@
 #include "src/header/Car.hpp"
 
 #include <graphics.h>
+#include "src/header/Grafika.hpp"
 
 Car::Car() {
 	posX = 0;
@@ -25,19 +26,25 @@ Car::Car(int _posX, int _posY, int _panjang, int _lebar) {
 }
 
 void Car::draw() {
-	setcolor(BLACK);
+	setcolor(BLUE);
 	int left = posX - lebar/2;
 	int right = left + lebar;
 	int top = posY + panjang/4;
 	int bottom = posY + panjang/2;
 	rectangle(left,top,right,bottom);
+	setfillstyle(SOLID_FILL, YELLOW);
+		
+	floodfill(left+1,top+1,BLUE);
 
 	int ax1 = posX - (lebar/2*3/4);
 	int ax2 = posX + lebar/2*3/4;
 	int ay = bottom - panjang;
-	line(ax1,ay,ax2,ay);
-	line(ax1,ay,left,top);
-	line(ax2,ay,right,top);
+	setcolor(BLUE);
+	Grafika::draw_line_FPC(ax1,ay,ax2,ay);
+	Grafika::draw_line_FPC(ax1,ay,left,top);
+	Grafika::draw_line_FPC(ax2,ay,right,top);
+	setfillstyle(SOLID_FILL, YELLOW);
+	floodfill(ax1+1,top-1,BLUE);
 	p1 = Point(ax1,ay);
 	p2 = Point(ax2,ay);
 }
