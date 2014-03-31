@@ -13,6 +13,8 @@ public:
 
 	void draw();
 
+	void update();
+
 private:
 	//biar gmpang, static aja
 	//satu2 tiap obs biar gampang

@@ -9,8 +9,7 @@ Tire::Tire() {
 Tire::Tire(Point p) {
 	center = p;
 
-	a = (center.getY() - 50 ) / 8;
-	b = (center.getY() - 50 ) / 12;
+	calculateAB();
 
 	lineColor = BLACK;
 	fillColor = BLACK;
@@ -20,9 +19,16 @@ Tire::~Tire() {
 	
 }
 
-void Tire::moveCloser(){
-
+void Tire::calculateAB() {
+	a = (center.getY() - 50 ) / 8;
+	b = (center.getY() - 50 ) / 12;
 }
+
+void Tire::moveCloser(){
+	center.moveRel(0, 2);
+	calculateAB();
+}
+
 bool Tire::isCollision(Car car){
 
 }

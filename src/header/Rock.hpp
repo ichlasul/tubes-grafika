@@ -13,6 +13,9 @@ public:
 	virtual void moveCloser();
 	virtual bool isCollision(Car car);
 	virtual void roll();
+
+private:
+	void calculateAB();
 };
 
 #endif

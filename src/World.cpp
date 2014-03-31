@@ -41,13 +41,14 @@ void World::loop() {
 
 void World::draw() {
 	bg.draw();
-	car.draw();
 	obs.draw();
+    car.draw();
 }
 
 void World::update() {
 	checkInput();
 	checkCollision();
+    obs.update();
 }
 
 void World::checkInput() {

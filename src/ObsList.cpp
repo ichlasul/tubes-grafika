@@ -31,3 +31,17 @@ void ObsList::draw() {
 		dTire[i].fillSmart();
 	}
 }
+
+void ObsList::update() {
+	for (int i = 0; i < nBox; i++) {
+		dBox[i].moveCloser();
+	}
+
+	for (i = 0; i < nRock; i++) {
+		dRock[i].moveCloser();
+	}
+
+	for (i = 0; i < nTire; i++) {
+		dTire[i].moveCloser();
+	}
+}
