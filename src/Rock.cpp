@@ -9,7 +9,7 @@ Rock::Rock() {
 Rock::Rock(Point p) {
 	center = p;
 
-	a = b = center.getY() / 12;
+	a = b = (center.getY() - 50 ) / 10;
 
 	lineColor = DARKGRAY;
 	fillColor = DARKGRAY;

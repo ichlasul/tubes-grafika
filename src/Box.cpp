@@ -22,7 +22,7 @@ Box::~Box() {
 }
 
 void Box::calculateVertices() {
-	size = center.getY() / 8;
+	size = (center.getY() - 50) / 6;
 
 	vertices[0] = Point(center.getX() - size/3, center.getY() - size);
 	vertices[1] = Point(center.getX() + size/3, center.getY() - size);

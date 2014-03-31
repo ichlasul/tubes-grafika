@@ -5,7 +5,7 @@
 
 World::World() {
 	isRunning = false;
-	bg = Bground(80);
+	bg = Bground(60);
 
 	fps = 15;
 
