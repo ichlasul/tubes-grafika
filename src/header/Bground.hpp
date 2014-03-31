@@ -10,8 +10,10 @@ public:
 	~Bground();
 
 	void draw();
+	void firstDraw();
 
 private:
+	void initGround();
 	void initSky();
 	void initRoad();
 
@@ -22,6 +24,7 @@ private:
 private:
 	Polygon sky;
 	Polygon road;
+	Polygon ground;
 
 	int horizon;
 	

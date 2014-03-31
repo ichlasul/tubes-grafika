@@ -22,6 +22,7 @@ World::~World() {
 void World::start() {
 	isRunning = true;
 
+    bg.firstDraw();
 	loop();
 }
 
@@ -31,7 +32,7 @@ void World::stop() {
 
 void World::loop() {
 	while (isRunning) {
-		Grafika::canvas_clear();
+		//Grafika::canvas_clear();
 		draw();
 		update();
         delay(1000 / fps);

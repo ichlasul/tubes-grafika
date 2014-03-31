@@ -7,6 +7,7 @@
 class Tire : public Ellipse, public Obs {
 public:
 	Tire();
+	Tire(Point p);
 	~Tire();
 
 	virtual void moveCloser();

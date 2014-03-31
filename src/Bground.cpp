@@ -3,17 +3,33 @@
 #include "src/header/Grafika.hpp"
 
 Bground::Bground() : horizon(40) {
+	initGround();
 	initSky();
 	initRoad();
 }
 
 Bground::Bground(int height) : horizon(height) {
+	initGround();
 	initSky();
 	initRoad();
 }
 
 Bground::~Bground() {
 
+}
+
+void Bground::initGround() {
+	Point point[4];
+
+	point[0] = Point(0, horizon);
+	point[1] = Point(Grafika::get_maxx(), horizon);
+	point[2] = Point(Grafika::get_maxx(), Grafika::get_maxy());
+	point[3] = Point(0, Grafika::get_maxy());
+
+	ground = Polygon(4, point);
+	ground.setCenter(Point(Grafika::get_maxx() / 2, Grafika::get_maxy()));
+	ground.setLineColor(BROWN);
+	ground.setFillColor(BROWN);
 }
 
 void Bground::initSky() {
@@ -47,14 +63,20 @@ void Bground::initRoad() {
 }
 
 void Bground::draw() {
+	drawRoad();
+}
+
+void Bground::firstDraw() {
 	drawGround();
 	drawSky();
-	drawRoad();
 }
 
 void Bground::drawGround() {
 	//Grafika::canvas_clear();
-	Grafika::canvas_color(6);
+	//Grafika::canvas_color(6);
+
+	ground.drawLine();
+	ground.fillSmart();
 }
 
 void Bground::drawSky() {
