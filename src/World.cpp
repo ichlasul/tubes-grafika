@@ -66,10 +66,10 @@ void World::checkInput() {
         ch = getch();
 
         // up
-        if (ch == 72) {
-            sb.display(50);    
-            getch();      
-        }
+        // if (ch == 72) {
+        //     sb.display(50);    
+        //     getch();      
+        // }
 
         // left
         if(ch == 75) {

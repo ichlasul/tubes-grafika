@@ -41,7 +41,7 @@ void Grafika::canvas_clear() {
 }
 
 void Grafika::canvas_finish() {
-	printf("Tekan apapun untuk keluar...");
+	// printf("Tekan apapun untuk keluar...");
 	getch();
 
 	closegraph();
