@@ -57,6 +57,6 @@ void SBoard::display(/*int score, */int win) {
     }
     sprintf(textWin,"%s%s", isWinLabel,isWin);
      
-     outtextxy((midx*3/4),(midy*3/4),textWin);
+     outtextxy((midx-40),(midy),textWin);
      // outtextxy((midx*3/4),midy,nbscore);
 }

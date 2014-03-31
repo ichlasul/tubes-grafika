@@ -13,7 +13,8 @@ public:
 
 	void draw();
 
-	void update();
+	void update(Car car);
+	bool checkCollision();
 
 private:
 	//biar gmpang, static aja
@@ -31,5 +32,6 @@ private:
 	int numbObs[500];
 	int nbObs;
 	int counter;
+	bool isCollision;
 };
 #endif

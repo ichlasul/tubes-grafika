@@ -56,7 +56,7 @@ void World::update() {
     tb.update();
 	checkInput();
 	checkCollision();
-    obs.update();
+    obs.update(car);
 }
 
 void World::checkInput() {
@@ -98,5 +98,8 @@ void World::checkInput() {
 }
 
 void World::checkCollision() {
-
+    if (obs.checkCollision()) {
+        isRunning = false;
+        sb.display(0);
+    }
 }

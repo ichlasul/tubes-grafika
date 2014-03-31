@@ -38,8 +38,36 @@ void Box::moveCloser(){
 }
 
 bool Box::isCollision(Car car){
+	bool output = false;
+	int leftcar = car.getPosX() - (car.getLebar()/2);
+	int rightcar = car.getPosX() + (car.getLebar()/2);
+	int topcar = car.getPosY() - (car.getPanjang()/2);
+	int bottomcar = car.getPosY() + (car.getPanjang()/2);
 
+	int leftObs = vertices[3].getX();
+	int rightObs = vertices[4].getX();
+	int topObs = vertices[0].getY();
+	int bottomObs = vertices[3].getY();
+
+	if ((leftObs>=leftcar) && (leftObs<=rightcar) && (topObs>=topcar) && (topObs<=bottomcar)) {
+		output = true;
+	}
+
+	if ((rightObs>=leftcar) && (rightObs<=rightcar) && (topObs>=topcar) && (topObs<=bottomcar)) {
+		output = true;
+	}
+
+	if ((leftObs>=leftcar) && (leftObs<=rightcar) && (bottomObs>=topcar) && (bottomObs<=bottomcar)) {
+		output = true;
+	}
+
+	if ((rightObs>=leftcar) && (rightObs<=rightcar) && (bottomObs>=topcar) && (bottomObs<=bottomcar)) {
+		output = true;
+	}
+
+	return output;
 }
+
 void Box::roll(){
 	
 }

@@ -2,6 +2,9 @@
 #include "src/header/Grafika.hpp"
 #include <stdlib.h>     /* srand, rand */
 #include <time.h> 
+#include <stdio.h>
+#include <conio.h>
+#include <stdlib.h>
 
 ObsList::ObsList() {
 	// dBox[0] = Box(Point(Grafika::get_maxx()/2, 60));
@@ -13,6 +16,7 @@ ObsList::ObsList() {
 	// dTire[0] = Tire(Point(Grafika::get_maxx()/2, 60));
 	nTire = 0;
 	nbObs = 0;
+	isCollision = false;
 }
 
 ObsList::~ObsList() {
@@ -36,7 +40,7 @@ void ObsList::draw() {
 	}
 }
 
-void ObsList::update() {
+void ObsList::update(Car car) {
 	counter++;
 	if ((counter % 110) == 0) {
 		srand (time(NULL));
@@ -77,12 +81,21 @@ void ObsList::update() {
 
 		if (obs == 0) {
 			dBox[idx].moveCloser();
+			if (dBox[idx].isCollision(car)) {
+				isCollision = true;
+			}
 		}
 		if (obs == 1) {
 			dTire[idx].moveCloser();
+			if (dTire[idx].isCollision(car)) {
+				isCollision = true;
+			}
 		}
 		if (obs == 2) {
 			dRock[idx].moveCloser();
+			if (dRock[idx].isCollision(car)) {
+				isCollision = true;
+			}
 		}
 	}
 
@@ -97,4 +110,8 @@ void ObsList::update() {
 	// for (i = 0; i < nTire; i++) {
 	// 	dTire[i].moveCloser();
 	// }
+}
+
+bool ObsList::checkCollision() {
+	return isCollision;
 }
