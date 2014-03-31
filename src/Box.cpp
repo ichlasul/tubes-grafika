@@ -27,4 +27,14 @@ Box::~Box() {
 
 }
 
+void Box::moveCloser(){
+
+}
+bool Box::isCollision(Car car){
+
+}
+void Box::roll(){
+	
+}
+
 

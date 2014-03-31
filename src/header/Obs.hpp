@@ -2,10 +2,11 @@
 #define GRAFIKA_OBSTACLE_HPP value
 
 #include "src/header/Boolean.h"
+#include "src/header/Car.hpp"
 
 class Obs {
 public:
-	virtual void isCollision() = 0;
+	virtual bool isCollision(Car car) = 0;
 
 	void update();
 
