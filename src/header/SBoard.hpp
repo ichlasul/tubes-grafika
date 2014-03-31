@@ -6,7 +6,7 @@ public:
 	SBoard() {};
 	~SBoard() {};
 
-	void display(int score, int win);
+	void display(/* int score, */int win);
 	
 };
 #endif
