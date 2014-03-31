@@ -233,6 +233,15 @@ void Grafika::draw_poly(int num, Point * vertices, int color) {
 	}
 }
 
+void Grafika::draw_ellipse(Point center, int a, int b, int degree, int lineColor) {
+	if (is_usinglibrary) {
+		setcolor(lineColor);
+		ellipse(center.getX(), center.getY(), 0, 360, a, b);
+	} else {
+		draw_ellipse(center.getX(), center.getY(), a, b);
+	}
+}
+
 void Grafika::draw_point_circle(int x0, int y0, int x, int y) {
 	int color = 57;
 
