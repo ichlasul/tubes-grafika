@@ -7,6 +7,7 @@
 class Rock : public Ellipse, public Obs {
 public:
 	Rock();
+	Rock(Point p);
 	~Rock();
 
 	virtual void moveCloser();

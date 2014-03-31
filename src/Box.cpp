@@ -1,7 +1,6 @@
 #include "src/header/Box.hpp"
 
 #include <conio.h>
-#include <stdio.h>
 
 Box::Box() {
 	
@@ -15,8 +14,6 @@ Box::Box(Point p) {
 	lineColor = BLACK;
 	fillColor = RED;
 
-	size = (center.getY() / 8);
-
 	calculateVertices();
 }
 
@@ -25,6 +22,8 @@ Box::~Box() {
 }
 
 void Box::calculateVertices() {
+	size = center.getY() / 8;
+
 	vertices[0] = Point(center.getX() - size/3, center.getY() - size);
 	vertices[1] = Point(center.getX() + size/3, center.getY() - size);
 	vertices[2] = Point(center.getX() + size/2, center.getY() - size / 2);
