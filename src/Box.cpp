@@ -33,7 +33,7 @@ void Box::calculateVertices() {
 }
 
 void Box::moveCloser(){
-	center.moveRel(0, 3);
+	center.moveRel(pos, 3);
 	calculateVertices();
 }
 
@@ -44,4 +44,6 @@ void Box::roll(){
 	
 }
 
-
+void Box::setPos(int x) {
+	pos = x;
+}

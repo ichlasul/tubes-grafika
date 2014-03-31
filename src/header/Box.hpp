@@ -13,12 +13,14 @@ public:
 	virtual void moveCloser();
 	virtual bool isCollision(Car car);
 	virtual void roll();
+	void setPos(int);
 
 private:
 	void calculateVertices();
 
 private:
 	int size;
+	int pos;
 };
 
 #endif

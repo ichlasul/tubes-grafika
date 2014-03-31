@@ -24,7 +24,7 @@ void Rock::calculateAB() {
 }
 
 void Rock::moveCloser(){
-	center.moveRel(0,3);
+	center.moveRel(pos,3);
 	calculateAB();
 
 }
@@ -33,4 +33,8 @@ bool Rock::isCollision(Car car){
 }
 void Rock::roll(){
 	
+}
+
+void Rock::setPos(int x) {
+	pos = x;
 }

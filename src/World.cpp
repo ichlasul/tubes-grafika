@@ -11,10 +11,10 @@ World::World() {
 
 	fps = 15;
 
-    int p = 100;
-    int l = 100;
+    int p = 80;
+    int l = 80;
     int xc = Grafika::get_maxx() / 2;
-    int yc = Grafika::get_maxy() - 60;
+    int yc = Grafika::get_maxy() - 100;
     car = Car(xc,yc,p,l);
 }
 

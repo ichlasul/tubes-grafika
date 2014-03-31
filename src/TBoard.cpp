@@ -13,7 +13,7 @@ TBoard::TBoard() {
 
 TBoard::TBoard(int _time) {
 	pos = Point(10,10);
-	time = _time*2;
+	time = _time*15;
 	TimeUp = false;
 	counter = _time;
 }
@@ -32,11 +32,12 @@ void TBoard::update() {
 }
 
 void TBoard::draw() {
+	setcolor(BLACK);
 	int left = pos.getX();
 	int top = pos.getY();
 	int right = left + 80;
 	int bottom = top + 20;
-	if ((time % 2) == 0) { if (time > 0) counter--; } 
+	if ((time % 15) == 0) { if (time > 0) counter--; } 
 	rectangle(left,top,right,bottom);
 	char txtTime[255];
 	char* lblTime = "Time : ";

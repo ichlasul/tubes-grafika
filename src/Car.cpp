@@ -25,6 +25,7 @@ Car::Car(int _posX, int _posY, int _panjang, int _lebar) {
 }
 
 void Car::draw() {
+	setcolor(BLACK);
 	int left = posX - lebar/2;
 	int right = left + lebar;
 	int top = posY + panjang/4;

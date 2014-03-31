@@ -25,7 +25,7 @@ void Tire::calculateAB() {
 }
 
 void Tire::moveCloser(){
-	center.moveRel(0, 2);
+	center.moveRel(pos, 3);
 	calculateAB();
 }
 
@@ -34,4 +34,8 @@ bool Tire::isCollision(Car car){
 }
 void Tire::roll(){
 	
+}
+
+void Tire::setPos(int x) {
+	pos = x;
 }

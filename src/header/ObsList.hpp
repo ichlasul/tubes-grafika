@@ -26,5 +26,10 @@ private:
 
 	Rock dRock[3];
 	int nRock;
+
+	int randObs[500];
+	int numbObs[500];
+	int nbObs;
+	int counter;
 };
 #endif
