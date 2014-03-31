@@ -32,8 +32,6 @@ private:
 	int timer;
 	int lastUpdateTime;
 	int fps;
-
-	Box box;
 };
 
 #endif

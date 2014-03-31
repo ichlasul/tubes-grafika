@@ -60,11 +60,11 @@ void Bground::drawGround() {
 void Bground::drawSky() {
 	sky.drawLine();
 	//sky.fill();
-	sky.fillPoly();
+	sky.fillSmart();
 }
 
 void Bground::drawRoad() {
 	road.drawLine();
 	//road.fill();
-	road.fillPoly();
+	road.fillSmart();
 }

@@ -14,8 +14,6 @@ World::World() {
     int xc = Grafika::get_maxx() / 2;
     int yc = Grafika::get_maxy() - 60;
     car = Car(xc,yc,p,l);
-
-    box = Box(40);
 }
 
 World::~World() {
@@ -43,9 +41,7 @@ void World::loop() {
 void World::draw() {
 	bg.draw();
 	car.draw();
-
-	box.drawLine();
-	box.fillPoly();
+	obs.draw();
 }
 
 void World::update() {

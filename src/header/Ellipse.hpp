@@ -9,7 +9,7 @@ public:
 	Ellipse(Point p, int a, int b);
 	~Ellipse();
 
-	void fillEllipse();
+	void fillSmart();
 	void drawLine();
 	void translate(int x, int y);
 	void rotate(int theta);

@@ -27,6 +27,11 @@ Ellipse::~Ellipse() {
 void Ellipse::drawLine() {
 	Grafika::draw_ellipse(center, a, b, degree, lineColor);
 }
+
+void Ellipse::fillSmart() {
+	
+}
+
 void Ellipse::translate(int x, int y) {
 
 }

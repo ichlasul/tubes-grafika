@@ -24,9 +24,9 @@ public:
 	 * Untuk saat ini bisa menggunakan flood fill
 	 * Algoritmanya sama untuk bidang apapun
 	 */
-	void fill() {
-		floodFill(center);
-	}
+	void fill();
+
+	virtual void fillSmart() = 0;
 
 	/**
 	 * Method untuk melakukan translasi

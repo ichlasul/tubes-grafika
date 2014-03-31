@@ -15,6 +15,10 @@ void Plane::setFillColor(int color ) {
 	fillColor = color;
 }
 
+void Plane::fill() {
+		floodFill(center);
+}
+
 void Plane::floodFill(Point position) {
 	Grafika::flood_fill(position, fillColor, lineColor);
 }

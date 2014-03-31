@@ -11,7 +11,7 @@ public:
 	Polygon(int num, Point * points);
 	~Polygon();
 
-	void fillPoly();
+	void fillSmart();
 	void drawLine();
 	void translate(int x, int y);
 	void rotate(int theta);
