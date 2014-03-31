@@ -12,7 +12,7 @@ Rock::Rock(Point p) {
 	a = b = center.getY() / 12;
 
 	lineColor = DARKGRAY;
-	fillColor = BLACK;
+	fillColor = DARKGRAY;
 }
 
 Rock::~Rock() {

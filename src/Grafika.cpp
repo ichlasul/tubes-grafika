@@ -367,3 +367,12 @@ void Grafika::fill_poly(int num, Point * vertices, int fill) {
 		
 	}
 }
+
+void Grafika::fill_ellipse(Point center, int a, int b, int degree, int fill) {
+	if (is_usinglibrary) {
+		setfillstyle(SOLID_FILL, fill);
+		fillellipse(center.getX(), center.getY(), a, b);
+	} else {
+
+	}
+}

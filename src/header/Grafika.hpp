@@ -40,6 +40,7 @@ public:
 
 	static void flood_fill(Point seed, int fill, int border);
 	static void fill_poly(int num, Point * vertices, int fill);
+	static void fill_ellipse(Point center, int a, int b, int degree, int fillColor);
 
 private:
 	static void draw_point_circle(int x0, int y0, int x, int y);

@@ -26,7 +26,7 @@ void Bground::initSky() {
 
 	sky = Polygon(4, point);
 	sky.setCenter(Point(Grafika::get_maxx() / 2, horizon / 2));
-	sky.setLineColor(BLUE);
+	sky.setLineColor(LIGHTBLUE);
 	sky.setFillColor(LIGHTBLUE);
 }
 

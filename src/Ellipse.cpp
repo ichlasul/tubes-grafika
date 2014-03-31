@@ -8,14 +8,14 @@ Ellipse::Ellipse() {
 	degree = 0;
 
 	lineColor = 15;
-	fillColor = 4;
+	fillColor = 15;
 	center = Point(0,0);
 }
 
 Ellipse::Ellipse(Point p, int a, int b) : a(a), b(b) {
 	degree = 0;
 	lineColor = 15;
-	fillColor = 4;
+	fillColor = 15;
 
 	center = p;
 }
@@ -29,7 +29,7 @@ void Ellipse::drawLine() {
 }
 
 void Ellipse::fillSmart() {
-
+	Grafika::fill_ellipse(center, a, b, degree, fillColor);
 }
 
 void Ellipse::translate(int x, int y) {
