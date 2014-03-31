@@ -1,5 +1,6 @@
 #include "src/header/World.hpp"
 #include "src/header/Grafika.hpp"
+#include <graphics.h>
 
 #include <dos.h>
 
@@ -69,12 +70,20 @@ void World::checkInput() {
         // left
         if(ch == 75) {
             car.moveLeft();
+            //agar tidak keluar jalan
+            if (getpixel(car.getP1().getX()-car.getSpeed(),car.getP1().getY()) == BROWN) {
+                car.moveRight();
+            }
 
         }
 
         //right
         if(ch == 77) {
             car.moveRight();
+            //agar mobil tidak keluar jalan
+            if (getpixel(car.getP2().getX()+car.getSpeed(),car.getP2().getY()) == BROWN) {
+                car.moveLeft();
+            }
         }
 
         // escape

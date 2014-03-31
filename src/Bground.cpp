@@ -64,6 +64,7 @@ void Bground::initRoad() {
 
 void Bground::draw() {
 	drawRoad();
+	drawSky();
 }
 
 void Bground::firstDraw() {

@@ -2,6 +2,7 @@
 #define GRAFIKA_CAR_HPP
 
 #include "src/header/Polygon.hpp"
+#include "src/header/Point.hpp"
 
 class Car : public Polygon {
 
@@ -20,6 +21,9 @@ public:
 	void setPosY(int);
 	void setPanjang(int);
 	void setLebar(int);
+	Point getP1();
+	Point getP2();
+	int getSpeed();
 
 
 private:
@@ -29,5 +33,7 @@ private:
 	int lebar;
 
 	int speed;
+	Point p1;
+	Point p2;
 };
 #endif

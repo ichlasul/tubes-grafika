@@ -21,7 +21,7 @@ Car::Car(int _posX, int _posY, int _panjang, int _lebar) {
 	panjang = _panjang;
 	lebar = _lebar;
 
-	speed = 10;
+	speed = 25;
 }
 
 void Car::draw() {
@@ -37,6 +37,8 @@ void Car::draw() {
 	line(ax1,ay,ax2,ay);
 	line(ax1,ay,left,top);
 	line(ax2,ay,right,top);
+	p1 = Point(ax1,ay);
+	p2 = Point(ax2,ay);
 }
 
 void Car::moveLeft() {
@@ -77,4 +79,16 @@ void Car::setPanjang(int _panjang) {
 
 void Car::setLebar(int _lebar) {
 	lebar = _lebar;
+}
+
+Point Car::getP1() {
+	return p1;
+}
+
+Point Car::getP2() {
+	return p2;
+}
+
+int Car::getSpeed() {
+	return speed;
 }
