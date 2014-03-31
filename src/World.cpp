@@ -38,6 +38,10 @@ void World::loop() {
 		draw();
 		update();
         delay(1000 / fps);
+        if (tb.isTimeUp()) {
+            isRunning = false;
+            sb.display(1);  
+        }
 	}
 }
 
