@@ -38,3 +38,8 @@ Point Point::left() {
 Point Point::right() {
 	return Point(x + 1, y);
 }
+
+void Point::moveRel(int dx, int dy) {
+	x += dx;
+	y += dy;
+}

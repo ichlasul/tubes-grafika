@@ -7,12 +7,15 @@
 class Box : public Polygon, public Obs {
 public:
 	Box();
-	Box(int size);
+	Box(Point p);
 	~Box();
 
 	virtual void moveCloser();
 	virtual bool isCollision(Car car);
 	virtual void roll();
+
+private:
+	void calculateVertices();
 
 private:
 	int size;

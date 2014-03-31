@@ -40,6 +40,8 @@ public:
 	 */
 	Point right();
 
+	void moveRel(int dx, int dy);
+
 private:
 	int x;
 	int y;

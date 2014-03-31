@@ -29,7 +29,7 @@ void Ellipse::drawLine() {
 }
 
 void Ellipse::fillSmart() {
-	
+
 }
 
 void Ellipse::translate(int x, int y) {

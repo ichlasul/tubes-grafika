@@ -1,7 +1,7 @@
 #include "src/header/ObsList.hpp"
 
 ObsList::ObsList() {
-	 dBox[0] = Box(40);
+	 dBox[0] = Box(Point(300, 200));
 	 nBox = 1;
 }
 

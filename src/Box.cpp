@@ -8,28 +8,36 @@ Box::Box() {
 }
 
 
-Box::Box(int size) : size(size) {
+Box::Box(Point p) {
 	num = 6;
-	center = Point(360, 200);
-
-	vertices[0] = Point(center.getX() - size/3, center.getY() - size);
-	vertices[1] = Point(center.getX() + size/3, center.getY() - size);
-	vertices[2] = Point(center.getX() + size/2, center.getY() - size / 2);
-	vertices[3] = Point(center.getX() + size/2, center.getY() + size / 2);
-	vertices[4] = Point(center.getX() - size/2, center.getY() + size / 2);
-	vertices[5] = Point(center.getX() - size/2, center.getY() - size / 2);
+	center = p;
 
 	lineColor = BLACK;
 	fillColor = RED;
+
+	size = (center.getY() / 8);
+
+	calculateVertices();
 }
 
 Box::~Box() {
 
 }
 
-void Box::moveCloser(){
-
+void Box::calculateVertices() {
+	vertices[0] = Point(center.getX() - size/3, center.getY() - size);
+	vertices[1] = Point(center.getX() + size/3, center.getY() - size);
+	vertices[2] = Point(center.getX() + size/2, center.getY() - size / 2);
+	vertices[3] = Point(center.getX() + size/2, center.getY() + size / 2);
+	vertices[4] = Point(center.getX() - size/2, center.getY() + size / 2);
+	vertices[5] = Point(center.getX() - size/2, center.getY() - size / 2);
 }
+
+void Box::moveCloser(){
+	center.moveRel(0, 5);
+	calculateVertices();
+}
+
 bool Box::isCollision(Car car){
 
 }
