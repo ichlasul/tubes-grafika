@@ -1,4 +1,4 @@
-#include "src/header/Tire.h"
+#include "src/header/Tire.hpp"
 
 Tire::Tire() {
 

@@ -1,4 +1,4 @@
-#include "src/header/Rock.h"
+#include "src/header/Rock.hpp"
 
 Rock::Rock() {
 
